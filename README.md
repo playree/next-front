@@ -124,19 +124,23 @@ $ yarn add -D @typescript-eslint/eslint-plugin @typescript-eslint/parser typescr
 }
 ```
 
-## ダークテーマと多言語対応
+## ダークモード対応
 
 ```
 $ yarn add next-themes
 ```
 
-### `next.config.js`
+### `tailwind.config.js`
 
 ```js
-const nextConfig = {
-  i18n: {
-    locales: ['ja', 'en'],
-    defaultLocale: 'ja',
-  },
+module.exports = {
+  darkMode: 'class',
 }
 ```
+
+### `_app.tsx`
+
+```tsx
+return <ThemeProvider attribute='class'>{element}</ThemeProvider>
+```
+
